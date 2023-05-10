@@ -50,6 +50,7 @@ For Each ws In Worksheets
                 'Input results from above in appropriate cells
                 ws.Range("I" & row_count).Value = Ticker_symbol
                 ws.Range("J" & row_count).Value = Yearly_Change
+                ws.Range("J" & row_count).NumberFormat = "$0.00"
                 ws.Range("K" & row_count).Value = Percent_change
                 ws.Range("K" & row_count).NumberFormat = "0.00%"
                 ws.Range("L" & row_count).Value = Stock_volume
@@ -94,7 +95,7 @@ For Each ws In Worksheets
         
         
         
-        'Creating fields for next section 
+        'Creating fields for next section
         ws.Range("O2").Value = "Greatest % Increase"
         ws.Range("O3").Value = "Greatest % Decrease"
         ws.Range("O4").Value = "Greatest Total Volume"
@@ -143,5 +144,6 @@ Next ws
     
 
 End Sub
+
 
 
